@@ -22,7 +22,8 @@ popd
 
 args=$@
 
-echo "newm-atha version 0.4 ALPHA"
+export XDG_SESSION_DESKTOP="newm-next"
+echo "newm-next version 0.4 ALPHA"
 echo "script dir is $DIR"
 echo "log dir is $LOGDIR"
 if [ $# -eq 0 ]; then

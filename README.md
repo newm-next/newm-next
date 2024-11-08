@@ -1,7 +1,8 @@
-# newm (~atha edition)
+# newm-next
 
-## annoucment
-come talk to us on [discord](https://discord.gg/GnCsYRWtBq)!
+## Annoucment
+
+Come talk to us on [discord](https://discord.gg/GnCsYRWtBq)!
 
 [video couteresy of Audrick Yeu](https://www.youtube.com/watch?v=IkriZGyjoeU), used with permission.
 
@@ -16,7 +17,7 @@ This IS a fork, and is reflected as such in [./LICENSE](./LICENSE)
 
 ## Idea
 
-**newm-atha** is a Wayland compositor written with laptops and touchpads in mind. The idea is, instead of placing windows inside the small viewport (that is, the monitor) to arrange them along an arbitrarily large two-dimensional wall (generally without windows overlapping) and focus the compositors job on moving around along this wall efficiently and providing ways to the user to rearrange the wall such that they find the overall layout intuitive.
+**newm-next** is a Wayland compositor written with laptops and touchpads in mind. The idea is, instead of placing windows inside the small viewport (that is, the monitor) to arrange them along an arbitrarily large two-dimensional wall (generally without windows overlapping) and focus the compositors job on moving around along this wall efficiently and providing ways to the user to rearrange the wall such that they find the overall layout intuitive.
 
 So, windows are placed on a two-dimensional grid of tiles taking either one by one, one by two, two by one, ... tiles of that grid. The compositor shows a one by one, two by two, ... view of that grid but scales the windows so they are usable on any zoom level (that is, zooming out the compositor actually changes the windows sizes). This makes for example switching between a couple of fullscreen applications very easy - place them in adjacent one by one tiles and have the compositor show a one by one view. And if you need to see them in parallel, zoom out. Then back in, and so on...
 
@@ -60,21 +61,21 @@ Goals include:
 
 ## Installing
 
-### Arch Linux
+### Arch Linux (NEEDS TO BE DONE, NOT WORKING)
 
 [Install on Arch linux](doc/install_Arch_Linux.md)
 
-There is a AUR package, `newm-atha-git`.
+There is a AUR package, `newm-next-git`.
 
 This however is not maintained by me, but instead by [Diego Aguilar](https://github.com/CRAG666).
 
 
-### NixOS
+### NixOS (NEEDS TO BE DONE, NOT WORKING)
 
 flakes are probably the easiest way to do this.
 
 ```sh
-nix build "sourcehut:~atha/newm-atha#newm-atha"
+nix build "sourcehut:~next/newm-next#newm-next"
 ./result/bin/start-newm -d
 ```
 
@@ -89,18 +90,18 @@ PAM authentication appears to be broken in this setup.
 
 ### Installing with pip
 
-[pywm-atha](https://git.sr.ht/~atha/pywm-atha) is the  main dependency of newm-atha. If all prerequisites are installed, the command:
+[pywm-next](https://git.sr.ht/~next/pywm-next) is the  main dependency of newm-next. If all prerequisites are installed, the command:
 
 ```sh
-pip3 install --user git+https://git.sr.ht/~atha/pywm-atha
+pip3 install --user git+https://github.com/newm-next/pywm-next
 ```
 
-should suffice.Additionally, unless configured otherwise, newm-atha uses alacritty as its default terminal.
+should suffice.Additionally, unless configured otherwise, newm-next uses alacritty as its default terminal.
 
 To install newm:
 
 ```sh
-pip3 install --user git+https://git.sr.ht/~atha/newm-atha
+pip3 install --user git+https://github.com/newm-next/newm-next
 ```
 
 Installing newm this way means it cannot be used as a login manager, as it can only be started by your current user (see below)
@@ -223,11 +224,11 @@ Therefore, we're stuck with the less secure (and a lot easier) way of using the 
 - `newm-cmd debug` prints out some debug info on the current state of views
 - `newm-cmd unlock` unlocks the compositor (if explicitly enabled in config) - this is useful in case you have trouble setting up the lock screen.
 
-### Logging straight into newm for-atha (greetd) 
+### Logging straight into newm for-next (greetd) 
 
-Make sure to install newm-atha as well as pywm-atha and a newm panel in a way in which the `greeter` user has access.
+Make sure to install newm-next as well as pywm-next and a newm panel in a way in which the `greeter` user has access.
 
-Place newm-atha configuration in `/etc/newm/config.py` and check, after logging in as `greeter`, that `start-newm` works and shows the login panel (login itself should not work). If it works, set
+Place newm-next configuration in `/etc/newm/config.py` and check, after logging in as `greeter`, that `start-newm` works and shows the login panel (login itself should not work). If it works, set
 
 ```toml
 command = "start-newm"
@@ -243,4 +244,4 @@ Thank you to:
 - Jonas Bucher for starting newm
 - Diego Aguilar for maintaing the AUR package and all the support and help you gave newm
 - Audrick Yeu for the amazing insight on the project, countless amount of time spent on improving the experience of users, and for the lovely readme video!
-- and all the other contributors to both newm and newm-atha!
+- and all the other contributors to both newm and newm-next!

@@ -42,14 +42,14 @@ class Lock:
             texts = [
                 "",
                 "",
-                Figlet(font="big", justify="center", width=width).renderText("newm-atha"),
+                Figlet(font="big", justify="center", width=width).renderText("newm-next"),
                 Figlet(font="digital", justify="center", width=width).renderText("Initial state")
             ]
         elif self.state == "request_user":
             texts = [
                 "",
                 "",
-                Figlet(font="big", justify="center", width=width).renderText("newm-atha"),
+                Figlet(font="big", justify="center", width=width).renderText("newm-next"),
                 Figlet(font="digital", justify="center", width=width).renderText("   ".join(self.users)),
                 Figlet(font="small", justify="center", width=width).renderText(self.selected_user),
             ]
@@ -57,7 +57,7 @@ class Lock:
             texts = [
                 "",
                 "",
-                Figlet(font="big", justify="center", width=width).renderText("newm-atha"),
+                Figlet(font="big", justify="center", width=width).renderText("newm-next"),
                 Figlet(font="digital", justify="center", width=width).renderText(self.message),
                 Figlet(font="small", justify="center", width=width).renderText("." * len(self.cred) if not self.pending else "-"),
             ]

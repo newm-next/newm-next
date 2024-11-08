@@ -10,11 +10,11 @@ args = sys.argv
 
 args.pop(0)
 
-print("newm-atha: hello there!")
-print("newm-atha: .start-newm args recived: ",args)
+print("newm-next: hello there!")
+print("newm-next: .start-newm args recived: ",args)
 
 if(len(args) == 1):
-    print("newm-atha: [WARN] no arguments provided")
+    print("newm-next: [WARN] no arguments provided")
     no_args = True
 
 debug = False

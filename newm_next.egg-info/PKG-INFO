@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: newm-next
+Version: 0.4
+Summary: newm-next - touchpad and touchscreen centric wayland compositor
+Home-page: https://sr.ht/~next/newm-next
+Author: ~next
+Author-email: 74566464+Pandademic@users.noreply.github.com
+License-File: LICENSE
+Requires-Dist: pycairo
+Requires-Dist: psutil
+Requires-Dist: python-pam
+Requires-Dist: pyfiglet
+Requires-Dist: dasbus
+Requires-Dist: thefuzz

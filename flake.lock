@@ -46,15 +46,15 @@
       "locked": {
         "lastModified": 1683389971,
         "narHash": "sha256-HI4jkvH+CCxSTDFcJ0R69tV7dD34NMFklGFDStU3uHo=",
-        "owner": "~atha",
-        "repo": "pywm-atha",
+        "owner": "~next",
+        "repo": "pywm-next",
         "rev": "4bfa3c75ba6678aeed8b3b33b2c4f43453d4319a",
         "type": "sourcehut"
       },
       "original": {
-        "owner": "~atha",
-        "repo": "pywm-atha",
-        "type": "sourcehut"
+        "owner": "newm-next",
+        "repo": "pywm-next",
+        "type": "github"
       }
     },
     "root": {

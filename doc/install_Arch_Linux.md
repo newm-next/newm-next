@@ -2,11 +2,11 @@
 
 ## With the aur
 
-The easiest and safest way to install newm-atha on Arch is by using its AUR package.
+The easiest and safest way to install newm-next on Arch is by using its AUR package.
 
 example:
 ```sh
-yay -S newm-atha-git
+yay -S newm-next-git
 ```
 (subsitute `yay` with your aur helper,eg: `paru`)
 
@@ -20,20 +20,20 @@ Maybe you want to test features in development or help with debugging, whatever 
 1. Clone PKBUILD
 
 ```sh
-yay -G newm-atha-git
+yay -G newm-next-git
 ```
 
 2. Navigate to the downloaded folder
 
 ```sh
-cd newm-atha-git
+cd newm-next-git
 ```
 
 3. Clone pywm and newm
 
 ```sh
-git clone https://git.sr.ht/~atha/pywm-atha.git --branch=<any branch or tag>
-git clone https://git.sr.ht/~atha/newm-atha.git --branch=<any branch or tag>
+git clone https://github.com/newm-next/pywm-next.git
+git clone https://github.com/newm-next/newm-next.git
 ```
 
 4. Build and install
@@ -50,6 +50,6 @@ makepkg -sic
   - **Q:** I started newm with  `start-newm -d` and it core dumped!
   - **A:** try installing polkit(`pacman -S polkit`). We can't explain it, but it has fixed issues in the past.
   - **Q:** What if it still doesn't work?
-  - **A:** Open a [ticket](https://todo.sr.ht/~atha/newm-atha) and post your log.
+  - **A:** Open a [ticket](https://todo.sr.ht/~next/newm-next) and post your log.
 
 

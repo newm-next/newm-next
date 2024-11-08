@@ -95,7 +95,7 @@ panels = {
         'native': {
             'enabled': True,
             'texts': lambda: [
-                "newm-atha",
+                "newm-next",
                 "version 0.4 ALPHA"
             ],
         }

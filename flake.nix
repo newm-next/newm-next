@@ -1,12 +1,12 @@
 {
-  description = "newm-atha - a touchpad/touchscreen centric wayland compositor";
+  description = "newm-next - a touchpad/touchscreen centric wayland compositor";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     flake-utils.url = "github:numtide/flake-utils";
 
-    pywmpkg.url = "sourcehut:~atha/pywm-atha";
+    pywmpkg.url = "github:newm-next/pywm-next";
     pywmpkg.inputs.nixpkgs.follows = "nixpkgs";
     pywmpkg.inputs.flake-utils.follows = "flake-utils";
   };
@@ -21,7 +21,7 @@
           (self: super: rec {
             python3 = super.python3.override {
               packageOverrides = self1: super1: {
-                pywm-atha = pywmpkg.packages.${system}.pywm-atha;
+                pywm-next = pywmpkg.packages.${system}.pywm-next;
                 dasbus = super1.buildPythonPackage rec {
                   pname = "dasbus";
                   version = "1.6";
@@ -58,15 +58,15 @@
       };
     in
     {
-      packages.newm-atha =
+      packages.newm-next =
         pkgs.python3.pkgs.buildPythonApplication rec {
-          pname = "newm-atha";
-          version = "0.4alpha";
+          pname = "newm-next";
+          version = "0.4.1";
 
           src = ./.;
 
           propagatedBuildInputs = with pkgs.python3Packages; [
-            pywm-atha
+            pywm-next
 
             pycairo
             psutil

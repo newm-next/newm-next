@@ -57,7 +57,7 @@ def _launcher() -> None:
         _, width = scr.getmaxyx()
         texts = [
             "",
-            Figlet(font="big", justify="center", width=width).renderText("newm-atha"),
+            Figlet(font="big", justify="center", width=width).renderText("newm-next"),
             Figlet(font="digital", justify="center", width=width).renderText("   ".join(["%d %s" % (k, v[0]) for k, v in shortcuts.items()])),
             "    > " + search] + [
                 ("    + " if i == 0 else "      ") + t[0] for i, t in enumerate(suggestions)

@@ -1,0 +1,6 @@
+pycairo
+psutil
+python-pam
+pyfiglet
+dasbus
+thefuzz
