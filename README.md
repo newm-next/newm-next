@@ -61,13 +61,13 @@ Goals include:
 
 ## Installing
 
-### Arch Linux (NEEDS TO BE DONE, NOT WORKING)
+### Arch Linux
 
 [Install on Arch linux](doc/install_Arch_Linux.md)
 
 There is a AUR package, `newm-next-git`.
 
-This however is not maintained by me, but instead by [Diego Aguilar](https://github.com/CRAG666).
+Someone told me that the PKGBUILD was faulty. It works but it needs some fixing.
 
 
 ### NixOS (NEEDS TO BE DONE, NOT WORKING)
@@ -90,7 +90,7 @@ PAM authentication appears to be broken in this setup.
 
 ### Installing with pip
 
-[pywm-next](https://git.sr.ht/~next/pywm-next) is the  main dependency of newm-next. If all prerequisites are installed, the command:
+[pywm-next](https://github.com/newm-next/pywm-next) is the  main dependency of newm-next. If all prerequisites are installed, the command:
 
 ```sh
 pip3 install --user git+https://github.com/newm-next/pywm-next
@@ -224,7 +224,7 @@ Therefore, we're stuck with the less secure (and a lot easier) way of using the 
 - `newm-cmd debug` prints out some debug info on the current state of views
 - `newm-cmd unlock` unlocks the compositor (if explicitly enabled in config) - this is useful in case you have trouble setting up the lock screen.
 
-### Logging straight into newm for-next (greetd) 
+### Logging straight into newm (greetd) 
 
 Make sure to install newm-next as well as pywm-next and a newm panel in a way in which the `greeter` user has access.
 
@@ -242,6 +242,6 @@ in `/etc/greetd/config.toml`.
 Thank you to:
 
 - Jonas Bucher for starting newm
-- Diego Aguilar for maintaing the AUR package and all the support and help you gave newm
+- Diego Aguilar for maintaing the atha AUR package and all the support and help you gave newm
 - Audrick Yeu for the amazing insight on the project, countless amount of time spent on improving the experience of users, and for the lovely readme video!
-- and all the other contributors to both newm and newm-next!
+- and all the other contributors to both newm, newm-atha and newm-next!
