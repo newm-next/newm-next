@@ -13,6 +13,7 @@ These values are mostly passed to [pywm](https://github.com/jbuchermn/pywm) and 
 | `output.pos_x`                       | `None`        | Integer: Output position x in layout (or None to be placed automatically)                               |
 | `output.pos_y`                       | `None`        | Integer: Output position y in layout (or None to be placed automatically)                               |
 | `output.anim`                        | `True`        | Bool: Enable or disable most animations on this output (useful for virtual outputs)                     |
+| `output.transform`                   | `0`           | Integer: Rotation of the screen (see Config: Transform below this section)                              |
 | `output.background.path`             |               | String: Optionally specify wallpaper for this output (overrides `background.path`)                      |
 | `output.background.anim`             | `True`        | Bool: Optionally disable movements of the background (overrides `output.anim` and `background.anim`)    |
 | `pywm`                               |               | Dictionary: [pywm](https://github.com/jbuchermn/pywm) config, see possible keys below                   |
@@ -39,6 +40,28 @@ These values are mostly passed to [pywm](https://github.com/jbuchermn/pywm) and 
 | `pywm.debug`                         | `False`       | Boolean: Loglevel debug plus output debug information to stdout on every F1 press                       |
 | `pywm.texture_shaders`               | `basic`       | String: Shaders to use for texture rendering (see `src/wm/shaders/texture`)                             |
 | `pywm.renderer_mode`                 | `pywm`        | String: Renderer mode, `pywm` (enable pywm renderer, and therefore blur), `wlr` (disable pywm renderer) |
+
+### Config: Transform
+
+If you want to rotate an output you can use pywm globals. In your `config.py` import then by adding these lines :
+
+```python
+from pywm import {
+    PYWM_TRANSFORM_90
+    PYWM_TRANSFORM_180
+    PYWM_TRANSFORM_270
+    PYWM_TRANSFORM_FLIPPED
+    PYWM_TRANSFORM_FLIPPED_90
+    PYWM_TRANSFORM_FLIPPED_180
+    PYWM_TRANSFORM_FLIPPED_270
+}
+```
+
+You can then use them by adding this line to your output config
+
+```
+"transform": PYWM_TRANSFORM_FLIPPED_90
+```
 
 ### Config: General appearance
 
