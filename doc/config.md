@@ -57,9 +57,9 @@ from pywm import {
 }
 ```
 
-You can then use them by adding this line to your output config
+You can then use them by adding this line to your output config :
 
-```
+```python
 "transform": PYWM_TRANSFORM_FLIPPED_90
 ```
 
