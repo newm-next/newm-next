@@ -125,16 +125,9 @@ you can use the `-c` flag to point it toward a config file.
 
 Configuring is handled via Python and read from either `$HOME/.config/newm/config.py` or (lower precedence) `/etc/newm/config.py`. Take `default_config.py` as a basis; details on the possible keys are provided below.
 
-For example, copy (path of `default_config.py` in the example assumes pip installation)
+The `default_config.py` file can be found in the [repo](newm/default_config.py) or on your computer at `/usr/lib/pythonX.XX/site-packages/newm/default_config.py`
 
-```sh
-cd
-mkdir -p .config/newm
-cp .local/lib/pythonX.Y/site-packages/newm/default_config.py .config/newm/config.py
-vim .config/newm/config.py
-```
-
-and adjust, e.g. for a German HiDPI MacBook with a wallpaper placed in the home folder,
+Copy it to `$HOME/.config/newm/config.py` and adjust, e.g. for a German HiDPI MacBook with a wallpaper placed in the home folder,
 
 ```py
 import os
