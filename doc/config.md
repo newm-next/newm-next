@@ -43,7 +43,7 @@ These values are mostly passed to [pywm](https://github.com/jbuchermn/pywm) and 
 
 ### Config: Transform
 
-If you want to rotate an output you can use pywm globals. In your `config.py` import then by adding these lines :
+If you want to rotate an output you can use pywm globals. In your `config.py` import them by adding these lines :
 
 ```python
 from pywm import {
