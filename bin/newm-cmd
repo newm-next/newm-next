@@ -20,6 +20,10 @@ commands: dict[str, tuple[str, dict[str, str]]] = {
         "Prevents newm from going into idle states (dimming the screen)",
         {},
         ),
+    "current-window-title": (
+        "Get focused window title",
+        {},
+        ),
     "config": (
         "Prints the configuration",
         {},
