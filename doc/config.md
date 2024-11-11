@@ -47,20 +47,20 @@ If you want to rotate an output you can use pywm globals. In your `config.py` im
 
 ```python
 from pywm import {
-    PYWM_TRANSFORM_90
-    PYWM_TRANSFORM_180
-    PYWM_TRANSFORM_270
-    PYWM_TRANSFORM_FLIPPED
-    PYWM_TRANSFORM_FLIPPED_90
-    PYWM_TRANSFORM_FLIPPED_180
-    PYWM_TRANSFORM_FLIPPED_270
+    PYWM_TRANSFORM_90,
+    PYWM_TRANSFORM_180,
+    PYWM_TRANSFORM_270,
+    PYWM_TRANSFORM_FLIPPED,
+    PYWM_TRANSFORM_FLIPPED_90,
+    PYWM_TRANSFORM_FLIPPED_180,
+    PYWM_TRANSFORM_FLIPPED_270,
 }
 ```
 
 You can then use them by adding this line to your output config :
 
 ```python
-"transform": PYWM_TRANSFORM_FLIPPED_90
+"transform": PYWM_TRANSFORM_FLIPPED_90,
 ```
 
 ### Config: General appearance
