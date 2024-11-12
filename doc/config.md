@@ -215,9 +215,13 @@ By default **newm_panel_basic** is included, where the first two of these are im
 | `panels.launcher.gesture_factor`        |`200`                                     | Higher number means less movement with 5 fingers is necessary to open launcher panel            |
 | `panels.launcher.h`                     |`0.8`                                     | Launcher panel: height (`1.0` is full height)                                                   |
 | `panels.launcher.w`                     |`0.8`                                     | Launcher panel: width (`1.0` is full width)                                                     |
+| `panels.launcher.x`                     |`0`                                       | Launcher panel: x position (Can fix issues for some outputs placements)                         |
+| `panels.launcher.y`                     |`0`                                       | Launcher panel: y position (Can fix issues for some outputs placements)                         |
 | `panels.lock.corner_radius`             |`50`                                      | Lock panel: corner radius (pixel)                                                               |
 | `panels.lock.h`                         |`0.6`                                     | Lock panel: height (`1.0` is full height)                                                       |
 | `panels.lock.w`                         |`0.7`                                     | Lock panel: width (`1.0` is full width)                                                         |
+| `panels.lock.x`                         |`0`                                       | Lock panel: x position (Can fix issues for some outputs placements)                             |
+| `panels.lock.y`                         |`0`                                       | Lock panel: y position (Can fix issues for some outputs placements)                             |
 | `panels.bar.visible_fullscreen`         |`False`                                   | Should the bars be visible in fullscreen mode?                                                  |
 | `panels.bar.visible_normal`             |`True`                                    | Should the bars be visible in normal mode (or only if the overview is shown)?                   |
 | `panels.top_bar.visible_fullscreen`     |`False`                                   | Analogous to `panels.bar.visible_fullscreen`                                                    |
@@ -234,6 +238,8 @@ By default **newm_panel_basic** is included, where the first two of these are im
 | `panels.bottom_bar.native.font_size`    |`12`                                      | Font size for native bottom bar                                                                 |
 | `panels.bottom_bar.native.height`       |`20`                                      | Height of native bottom bar                                                                     |
 | `panels.bottom_bar.native.texts`        |`lambda: ["4", "5", "6"]`                 | Function called each time bottom bar is rendered producing the text to render                   |
+
+The values for `panels.lock.x/y` and `panels.launcher.x/y` will be added to the default values that is calculated by NEWM. This is useful if one of your secondaries outputs is placed below your main one since it's where the panels are placed by default when inactive.
 
 The basic launcher panel is configured using `~/.config/newm/launcher.py`, e.g.
 
