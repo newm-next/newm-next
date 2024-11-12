@@ -43,6 +43,14 @@ conf_panel_lock_corner_radius = configured_value('panels.lock.corner_radius', 50
 conf_panel_launcher_h = configured_value('panels.launcher.h', 0.8)
 conf_panel_launcher_w = configured_value('panels.launcher.w', 0.8)
 conf_panel_launcher_corner_radius = configured_value('panels.launcher.corner_radius', 0)
+"""
+(remove me when working): New panels features
+Adding pos_x pos_y for panels
+"""
+conf_panel_lock_x = configured_value('panels.lock.x', 0)
+conf_panel_lock_y = configured_value('panels.lock.y', 1180)
+conf_panel_launcher_x = configured_value('panels.launcher.x', 0)
+conf_panel_launcher_y = configured_value('panels.launcher.y', 1180)
 
 conf_anim_t = configured_value('anim_time', .3)
 
@@ -182,8 +190,8 @@ class View(PyWMView[Layout], Animate[PyWMViewDownstreamState], Animatable):
                 round(ws.height * conf_panel_lock_h()))
 
             result.box = (
-                ws.pos_x + (ws.width - result.size[0]) / 2.,
-                ws.pos_y + (ws.height - result.size[1]) / 2. + (1. - state.lock_perc) * ws.height,
+                ws.pos_x + (ws.width - result.size[0]) / 2. + conf_panel_lock_y(),
+                ws.pos_y + (ws.height - result.size[1]) / 2. + (1. - state.lock_perc) * ws.height + conf_panel_lock_y(),
                 result.size[0],
                 result.size[1])
 
