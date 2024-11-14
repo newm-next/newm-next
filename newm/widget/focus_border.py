@@ -24,6 +24,7 @@ conf_anim_time = configured_value('focus.anim_time', 0.3)
 conf_animate_on_change = configured_value('focus.animate_on_change', False)
 conf_enabled = configured_value('focus.enabled', True)
 conf_color = configured_value('focus.color', '#19CEEB55')
+conf_gradient = configured_value('focus.gradient', ('', '', 0))
 
 class FocusBorder(Animate[PyWMWidgetDownstreamState], PyWMWidget):
     def __init__(self, wm: Layout, output: PyWMOutput, parent: FocusBorders, *args: Any, **kwargs: Any):
@@ -41,7 +42,7 @@ class FocusBorder(Animate[PyWMWidgetDownstreamState], PyWMWidget):
         self._corner_radius = radius
         self.set_primitive("rounded_corners_border", [], [
             # Color
-            *get_color(conf_color()),
+            *get_color(conf_color(), conf_gradient()),
             # Corner radius
             self._corner_radius * self._output.scale,
             # Width
