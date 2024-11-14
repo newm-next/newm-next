@@ -90,14 +90,19 @@ A very basic server-side decoration implementation is available (unicolor rounde
 
 Also a border highlight can be displayed around focused windows:
 
-| Configuration key               | Default value | Description                            |
-| ------------------------------- | ------------- | -------------------------------------- |
-|`focus.enabled`                  |`True`         | Enable the fous highlight              |
-|`focus.color`                    |`'#19CEEB55'`  | Color of the focus highlight           |
-|`focus.distance`                 |`4`            | Width of the border                    |
-|`focus.width`                    |`2`            | Distance to view                       |
-|`focus.animate_on_change`        |`False`        | Show an animation when focus changes   |
-|`focus.anim_time`                |`0.3`          | Timescale of this animation            |
+| Configuration key               | Default value | Description                                              |
+| ------------------------------- | ------------- | -------------------------------------------------------- |
+|`focus.enabled`                  |`True`         | Enable the fous highlight                                |
+|`focus.color`                    |`'#19CEEB55'`  | Color of the focus highlight                             |
+|`focus.gradient.primary`         |`''`           | Primary color of the gradient for the focus highlight    |
+|`focus.gradient.secondary`       |`''`           | Secondary color of the gradient for the focus hightlight | 
+|`focus.gradient.angle`           |`0`            | Angle (in deg) that will be applied to the gradient      |
+|`focus.distance`                 |`4`            | Width of the border                                      |
+|`focus.width`                    |`2`            | Distance to view                                         |
+|`focus.animate_on_change`        |`False`        | Show an animation when focus changes                     |
+|`focus.anim_time`                |`0.3`          | Timescale of this animation                              |
+
+Gradient will be applied only if at least one color (primary or secondary) is applied. If not, the value of color will be used.
 
 ### Config: Behaviour, keys and gestures
 

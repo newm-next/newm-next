@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='newm-next',
-      version='0.4',
+      version='0.4.2',
       description='newm-next - touchpad and touchscreen centric wayland compositor',
       url="https://sr.ht/~next/newm-next",
       author='~next',
