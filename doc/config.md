@@ -102,7 +102,7 @@ Also a border highlight can be displayed around focused windows:
 |`focus.animate_on_change`        |`False`        | Show an animation when focus changes                     |
 |`focus.anim_time`                |`0.3`          | Timescale of this animation                              |
 
-Gradient will be applied only if at least one color (primary or secondary) is applied. If not, the value of color will be used.
+Gradient will be applied only if at least one color (`focus.gradient.primary` or `focus.gradient.secondary`) is applied. If not, the value of `focus.color` will be used.
 
 ### Config: Behaviour, keys and gestures
 
