@@ -13,7 +13,7 @@ from pywm import PyWMWidget, PyWMWidgetDownstreamState, PyWMOutput, DamageTracke
 from ..animate import Animate, Animatable
 from ..interpolation import WidgetDownstreamInterpolation
 from ..config import configured_value
-from ..util import get_color
+from ..util import get_border_color
 
 logger = logging.getLogger(__name__)
 
@@ -44,7 +44,7 @@ class FocusBorder(Animate[PyWMWidgetDownstreamState], PyWMWidget):
         self._corner_radius = radius
         self.set_primitive("rounded_corners_border", [], [
             # Color
-            *get_color(conf_color(), (conf_gradient_primary(), conf_gradient_secondary(), conf_gradient_angle())),
+            *get_border_color(conf_color(), (conf_gradient_primary(), conf_gradient_secondary(), conf_gradient_angle())),
             # Corner radius
             self._corner_radius * self._output.scale,
             # Width

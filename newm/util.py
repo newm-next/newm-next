@@ -90,12 +90,13 @@ def parse_color(color: Any) -> Any:
 def parse_gradient(gradient: Any) -> Any:
     return (*parse_color(gradient[0]), *parse_color(gradient[1]), gradient[2])
 
-def get_color(color: Any, gradient: Any) -> tuple[float, float, float, float, float, float, float, float, float]:
+def get_color(color: Any) -> tuple[float, float, float, float, float]:
+    return parse_color(color)
+
+def get_border_color(color: Any, gradient: Any) -> tuple[float, float, float, float, float, float, float, float, float]:
     if gradient == ('', '', 0):
         # color
         fake_gradient = parse_color(color)
         return (*fake_gradient, *fake_gradient, 0.)
     else:
         return parse_gradient(gradient)
-
-
