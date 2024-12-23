@@ -75,7 +75,7 @@ Someone told me that the PKGBUILD was faulty. It works but it needs some fixing.
 flakes are probably the easiest way to do this.
 
 ```sh
-nix build "sourcehut:~next/newm-next#newm-next"
+nix build "github:newm-next/newm-next#newm-next"
 ./result/bin/start-newm -d
 ```
 

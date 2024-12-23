@@ -50,6 +50,6 @@ makepkg -sic
   - **Q:** I started newm with  `start-newm -d` and it core dumped!
   - **A:** try installing polkit(`pacman -S polkit`). We can't explain it, but it has fixed issues in the past.
   - **Q:** What if it still doesn't work?
-  - **A:** Open a [ticket](https://todo.sr.ht/~next/newm-next) and post your log.
+  - **A:** Open a [ticket](https://github.com/newm-next/newm-next/issues) and post your log.
 
 
